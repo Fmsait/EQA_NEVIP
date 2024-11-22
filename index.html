@@ -242,8 +242,9 @@
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
       }
-      document.getElementById('dsmValue').textContent = data.dsm501aConcentration !== undefined ? data.dsm501aConcentration : 'N/A';
       document.getElementById('iqaValue').textContent = data.iqa !== undefined ? data.iqa : 'N/A';
+      document.getElementById('dsmValue').textContent = data.dsm501aConcentration !== undefined ? data.dsm501aConcentration : 'N/A';
+     
     }
 
     setInterval(fetchData, 5000); // Atualiza os dados a cada 5 segundos
