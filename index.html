@@ -239,11 +239,11 @@
         } else {
           document.getElementById('temperatureValue').textContent = 'N/A';
         }
+            document.getElementById('iqaValue').textContent = data.iqa !== undefined ? data.iqa : 'N/A';
+      document.getElementById('dsmValue').textContent = data.dsm501aConcentration !== undefined ? data.dsm501aConcentration : 'N/A';
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
-      }
-      document.getElementById('iqaValue').textContent = data.iqa !== undefined ? data.iqa : 'N/A';
-      document.getElementById('dsmValue').textContent = data.dsm501aConcentration !== undefined ? data.dsm501aConcentration : 'N/A';
+      }  
      
     }
 
