@@ -231,6 +231,7 @@
         document.getElementById('mq9Value').textContent = data.coPPM !== undefined ? data.coPPM : 'N/A';     
         document.getElementById('mq135Value').textContent = data.airQualityPPM !== undefined ? data.airQualityPPM : 'N/A';
         document.getElementById('humidityValue').textContent = data.humidity !== undefined ? data.humidity : 'N/A';        
+        document.getElementById('iqaValue').textContent = data.iqa !== undefined ? data.iqa : 'N/A';
         
         if (data.temperature !== undefined) {
           const temperatureCelsius = data.temperature;
@@ -238,8 +239,7 @@
           document.getElementById('temperatureValue').textContent = `${temperatureCelsius.toFixed(1)}°C / ${temperatureFahrenheit.toFixed(1)}°F`;
         } else {
           document.getElementById('temperatureValue').textContent = 'N/A';
-        }
-            document.getElementById('iqaValue').textContent = data.iqa !== undefined ? data.iqa : 'N/A';
+        }            
       document.getElementById('dsmValue').textContent = data.dsm501aConcentration !== undefined ? data.dsm501aConcentration : 'N/A';
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
